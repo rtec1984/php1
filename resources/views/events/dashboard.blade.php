@@ -9,12 +9,13 @@
 </div>
 <div class="col-md-10 offset-md-1 dashboard-events-container">
     @if(count($events) > 0)
-    <table class="table">
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Participantes</th>
+                <th scope="col">Data</th>
                 <th scope="col">Ações</th>
             </tr>
         </thead>
@@ -24,6 +25,7 @@
                     <td scropt="row">{{ $loop->index + 1 }}</td>
                     <td><a href="/events/{{ $event->id }}">{{ $event->title }}</a></td>
                     <td>{{ count($event->users) }}</td>
+                    <td>{{ date('d/m/Y', strtotime($event->date)) }}</td>
                     <td>
                         <a href="/events/edit/{{ $event->id }}" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a> 
                         <form action="/events/{{ $event->id }}" method="POST">
@@ -45,12 +47,13 @@
 </div>
 <div class="col-md-10 offset-md-1 dashboard-events-container">
 @if(count($eventsasparticipant) > 0)
-<table class="table">
+<table class="table table-hover">
     <thead>
         <tr>
             <th scope="col">#</th>
             <th scope="col">Nome</th>
             <th scope="col">Participantes</th>
+            <th scope="col">Data</th>
             <th scope="col">Ações</th>
         </tr>
     </thead>
@@ -60,6 +63,7 @@
                 <td scropt="row">{{ $loop->index + 1 }}</td>
                 <td><a href="/events/{{ $event->id }}">{{ $event->title }}</a></td>
                 <td>{{ count($event->users) }}</td>
+                <td>{{ date('d/m/Y', strtotime($event->date)) }}</td>
                 <td>
                     <form action="/events/leave/{{ $event->id }}" method="POST">
                         @csrf
