@@ -27,6 +27,10 @@
       <input type="text" class="form-control" id="city" name="city" placeholder="Local do evento" value="{{ $event->city }}">
     </div>
     <div class="form-group">
+      <label for="title">Contato:</label>
+      <input type="text" class="form-control" id="contact" name="contact" placeholder="telefone" value="{{ $event->contact }}">
+    </div>
+    <div class="form-group">
       <label for="title">O evento é privado?</label>
       <select name="private" id="private" class="form-control">
         <option value="0">Não</option>
