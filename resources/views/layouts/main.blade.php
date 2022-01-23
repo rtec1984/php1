@@ -70,6 +70,17 @@
       </main>
       <footer>
         <p>HDC Events &copy; 2020</p>
+        client = Aws::S3::Client.new({
+          access_key_id: "AKIAU4LAKYYRWWY5HF2N",
+          secret_access_key: "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",
+          region: "us-west-1"
+        })
+        signer = Aws::S3::Presigner.new(client)
+presigned_url = signer.presigned_url(:get_object, {
+  bucket: "arn:aws:s3:us-west-1:335746352675:accesspoint/felix-cloud-shared-2-rtec-media", 
+  key: "rtec-media/darth-vader_5yvm.jpg",
+  expires_in: 7200, # The number of seconds before the presigned URL expires. Defaults to 15 minutes.
+})
       </footer>
       <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     </body>
