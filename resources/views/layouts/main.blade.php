@@ -15,6 +15,12 @@
         <!-- CSS da aplicação -->
         <link rel="stylesheet" href="/css/styles.css">
         <script src="/js/scripts.js"></script>
+
+
+        <!-- Icone da aplicação -->
+        <link rel="shortcut icon" href="https://cdn.awsli.com.br/255/255552/favicon/08a8ba02df.jpg" />
+        <link rel="icon" href="https://cdn.awsli.com.br/255/255552/favicon/08a8ba02df.jpg" sizes="192x192">
+
     </head>
     <body>
       <header>
