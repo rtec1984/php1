@@ -73,11 +73,11 @@ header {
 
 /* Search Container */
 #search-container {
-  background-image: url("https://cdn.awsli.com.br/1140x1140/255/255552/banner/6c7e585deb.jpg");
+  background-image: url("");
   background-size: cover;
-  background-position: top;
+  background-position: center;
   height: 400px;
-  padding: 500px;
+  padding: 50px;
   text-align: center;
 }
 
