@@ -33,14 +33,14 @@
             </a>
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a href="/" class="nav-link">Eventos</a>
+                <a href="/" class="nav-link">EVENTOS</a>
               </li>
               <li class="nav-item">
-                <a href="/events/create" class="nav-link">Criar Eventos</a>
+                <a href="/events/create" class="nav-link">CRIAR EVENTOS</a>
               </li>
               @auth
               <li class="nav-item">
-                <a href="/dashboard" class="nav-link">Meus eventos</a>
+                <a href="/dashboard" class="nav-link">MEUS EVENTOS</a>
               </li>
               <li class="nav-item">
                 <form action="/logout" method="POST">
@@ -56,10 +56,10 @@
               @endauth
               @guest
               <li class="nav-item">
-                <a href="/login" class="nav-link">Entrar</a>
+                <a href="/login" class="nav-link">ENTRAR</a>
               </li>
               <li class="nav-item">
-                <a href="/register" class="nav-link">Cadastrar</a>
+                <a href="/register" class="nav-link">CADASTRAR</a>
               </li>
               @endguest
             </ul>
