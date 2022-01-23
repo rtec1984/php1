@@ -53,7 +53,7 @@ header {
 
 /* navbar */
 #navbar img {
-  width: 250px;
+  width: 50%;
 }
 
 #navbar {
@@ -242,6 +242,6 @@ footer p {
   margin-bottom: 0;
 }
 
-footer-image {
-  width: 100px;
+#footer-image img{
+  width: 20%;
 }
