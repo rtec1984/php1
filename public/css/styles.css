@@ -64,11 +64,11 @@ header {
 
 #navbar a {
   font-size: 32px;
-  color: #757575;
+  color: #000000;
 }
 
 #navbar a:hover {
-  color: #F2A340;
+  color: #757575;
 }
 
 /* Search Container */
@@ -82,7 +82,7 @@ header {
 }
 
 #search-container h1 {
-  color: #F2A340;
+  color: #000000;
   margin-bottom: 30px;
   font-weight: 900;
 }
@@ -185,7 +185,7 @@ header {
 
 #info-container ion-icon {
   font-size: 20px;
-  color: #F2A340;
+  color: #000000;
   margin-right: 5px;
 }
 
@@ -230,8 +230,8 @@ header {
 /* footer */
 footer {
   text-align: center;
-  background-color: #353E48;
-  color: #FFF;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   padding: 30px;
   position: absolute;
   bottom: 0;
