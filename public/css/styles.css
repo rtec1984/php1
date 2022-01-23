@@ -9,11 +9,6 @@ body {
   position: relative;
 }
 
-header {
-  background-color: #FFF;
-  border-bottom: 1px solid #CCC;
-}
-
 .row {
   margin: 0;
 }
@@ -35,9 +30,9 @@ header {
 }
 
 .msg {
-  background-color: #D4EDDA;
-  color: #155724;
-  border: 1px solid #C3E6CB;
+  color: #ffffff;
+  background-color: #757575;
+  border: 2px solid #000000;
   width: 100%;
   margin-bottom: 0;
   text-align: center;
@@ -46,9 +41,9 @@ header {
 
 #info-container .already-joined-msg {
   margin: 15px 0;
-  color: #004085;
-  background-color: #CCE5FF;
-  border: 1px solid #B8DAFF;
+  color: #ffffff;
+  background-color: #757575;
+  border: 2px solid #000000;
   padding: 10px;
   width: 275px;
 }
@@ -132,7 +127,7 @@ header {
 }
 
 .card .card-date {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: #757575;
 }
@@ -145,7 +140,7 @@ header {
 }
 
 .card-participants {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: #757575;
 }
@@ -182,18 +177,18 @@ header {
 
 #info-container p {
   margin: 0;
-  font-size: 14px;
+  font-size: 18px;
   display: flex;
 }
 
 #info-container h3,
 #description-container h3 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
 }
 
 #info-container ion-icon {
-  font-size: 20px;
+  font-size: 24px;
   color: #000000;
   margin-right: 5px;
 }
@@ -205,6 +200,7 @@ header {
 #items-list {
   list-style: none;
   padding-left: 0;
+  font-size: 18px;
 }
 
 #items-list li {
@@ -213,6 +209,7 @@ header {
 
 #description-container {
   margin-top: 30px;
+  font-size: 18px;
 }
 
 /* Dashboard */
@@ -251,4 +248,13 @@ footer {
 
 footer p {
   margin-bottom: 0;
+}
+
+.rtec a {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 900;
+}
+.rtec a:hover {
+  color: #000000;
 }

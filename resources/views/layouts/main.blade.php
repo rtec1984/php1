@@ -49,7 +49,7 @@
                     class="nav-link" 
                     onclick="event.preventDefault();
                     this.closest('form').submit();">
-                    Sair
+                    SAIR
                   </a>
                 </form>
               </li>
@@ -77,7 +77,8 @@
         </div>
       </main>
       <footer>
-        <p>RTEC &copy; 2017-<?php echo date('Y'); ?></p>
+        <div class="rtec">
+        <p>FEITO POR <a href="https://rochatec.lojaintegrada.com.br/" target="_blank" class="rtec">RTEC</a> &copy; 2017-<?php echo date('Y'); ?></p>
       </footer>
       <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     </body>
