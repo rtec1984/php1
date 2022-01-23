@@ -236,9 +236,12 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  image-width: 100px;
 }
 
 footer p {
   margin-bottom: 0;
+}
+
+footer-image {
+  width: 100px;
 }

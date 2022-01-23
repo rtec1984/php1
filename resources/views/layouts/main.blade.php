@@ -77,7 +77,7 @@
         </div>
       </main>
       <footer>
-        <p><img src="https://cdn.awsli.com.br/255/255552/logo/7ac966010f.jpg" alt="RTEC"> &copy; 2017-<?php echo date('Y'); ?></p>
+        <p><img class="footer-image" src="https://cdn.awsli.com.br/255/255552/logo/7ac966010f.jpg" alt="RTEC"> &copy; 2017-<?php echo date('Y'); ?></p>
       </footer>
       <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     </body>
