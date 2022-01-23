@@ -75,7 +75,7 @@ header {
 #search-container {
   background-image: url("https://cdn.awsli.com.br/1140x1140/255/255552/banner/6c7e585deb.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   height: 400px;
   padding: 500px;
   text-align: center;
