@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'TESTE')
+@section('title', 'HDC Events')
 
 @section('content')
 
