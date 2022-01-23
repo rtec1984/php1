@@ -23,13 +23,15 @@ header {
 }
 
 .btn-primary {
-  background-color: #F2A340;
-  border: 2px solid #C28008;
+  background-color: #757575;
+  border: 2px solid #000000;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .btn-primary:hover {
-  background-color: #C28008;
-  border-color: #C28008;
+  background-color: #000000;
+  border-color: #000000;
 }
 
 .msg {
@@ -100,11 +102,15 @@ header {
 
 #events-container h2 {
   margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 #events-container .subtitle {
   color: #757575;
   margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 #cards-container {
@@ -126,19 +132,21 @@ header {
 }
 
 .card .card-date {
-  font-size: 12px;
-  color: #CCC;
+  font-size: 20px;
+  font-weight: bold;
+  color: #757575;
 }
 
 .card .card-title {
   color: #212121;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
 .card-participants {
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: bold;
   color: #757575;
 }
 
@@ -231,12 +239,14 @@ header {
 /* footer */
 footer {
   text-align: center;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
+  background-color: #757575;
+  color: #ffffff;
   padding: 30px;
   position: absolute;
   bottom: 0;
   width: 100%;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 footer p {
