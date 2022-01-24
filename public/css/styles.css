@@ -71,7 +71,7 @@ body {
 
 /* Search Container */
 #search-container {
-  background-image: url("https://felix-cloud-shared-2-rtec-media-335746352675.s3-accesspoint.us-west-1.amazonaws.com/rtec-media/banner.jpg?response-content-disposition=inline%3B%20filename%3D%22banner.jpg%22%3B%20filename%2A%3DUTF-8%27%27banner.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAU4LAKYYRWWY5HF2N%2F20220123%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20220123T174808Z&X-Amz-Expires=7200&X-Amz-SignedHeaders=host&X-Amz-Signature=3bda82078ce2880b7c76d3b1cc8e48cd5dd3ef86d3e1bd843eb2f5169c802bba");
+  background-image: url("https://felix-cloud-shared-2-rtec-media-335746352675.s3-accesspoint.us-west-1.amazonaws.com/rtec-media/banner.jpg?response-content-disposition=inline%3B%20filename%3D%22banner.jpg%22%3B%20filename%2A%3DUTF-8%27%27banner.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAU4LAKYYRWWY5HF2N%2F20220124%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20220124T012420Z&X-Amz-Expires=7200&X-Amz-SignedHeaders=host&X-Amz-Signature=7755472486d979a7aea060624cad942910324e8250d49cc13429cf848fa8926f");
   background-size: cover;
   background-position: center;
   height: 400px;
