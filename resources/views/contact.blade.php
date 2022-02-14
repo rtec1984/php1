@@ -6,37 +6,39 @@
 
 <h1>Contato</h1>
 
-require '/path/to/vendor/autoload.php';
+<?php
 
-//Create Client in Ruby/Rails
-client = Aws::S3::Client.new({
-    access_key_id: "AKIAU4LAKYYRWWY5HF2N",
-    secret_access_key: "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",
-    region: "us-west-1"
-  })
+// Include the SDK using the Composer autoloader
+date_default_timezone_set('America/Los_Angeles');
+require 'vendor/autoload.php';
 
-//Upload file in Ruby/Rails
-resp = client.put_object({
-    acl: "private", # accepts private, public-read
-    body: source_file, # file/IO object, or string data
-    bucket: "arn:aws:s3:us-west-1:335746352675:accesspoint/felix-cloud-shared-2-rtec", 
-    key: "rtec/path/to/HappyFace.jpg", 
-  })
-  
-  resp.to_h outputs the following:
-  {
-    etag: "\"6805f2cfc46c0f04559748bb039d69ae\"", 
-    version_id: "tpf3zF08nBplQK1XLOefGskR7mGDwcDk", 
-  }
+$s3 = new Aws\S3\S3Client([
+  'version' => 'latest',
+  'region'  => 'us-east-1',
+  'endpoint' => 'https://' . getenv('STACKHERO_MINIO_HOST'),
+  'use_path_style_endpoint' => true,
+  'credentials' => [
+    'key'    => getenv('STACKHERO_MINIO_ACCESS_KEY'),
+    'secret' => getenv('STACKHERO_MINIO_SECRET_KEY')
+  ],
+]);
 
-  //Get file URL in Ruby/Rails
-  base_url = "https://felix-cloud-shared-2.s3.us-west-1.amazonaws.com/rtec/"
-  public_url = base_url + "path/to/HappyFace.jpg"
 
-  //Delete file in Ruby/Rails
-  resp = client.delete_object({
-    bucket: "arn:aws:s3:us-west-1:335746352675:accesspoint/felix-cloud-shared-2-rtec", 
-    key: "rtec/path/to/HappyFace.jpg", 
-  })
+// Send a PutObject request and get the result object.
+$insert = $s3->putObject([
+  'Bucket' => 'testbucket',
+  'Key'    => 'testkey',
+  'Body'   => 'Hello from MinIO!!'
+]);
+
+// Download the contents of the object.
+$retrive = $s3->getObject([
+  'Bucket' => 'testbucket',
+  'Key'    => 'testkey',
+  'SaveAs' => 'testkey_local'
+]);
+
+// Print the body of the result by indexing into the result object.
+echo $retrive['Body'];
 
 @endsection
