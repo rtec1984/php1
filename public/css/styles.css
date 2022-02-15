@@ -71,7 +71,7 @@ body {
 
 /* Search Container */
 #search-container {
-  background-image: url("https://rtec-php1.s3.us-east-1.amazonaws.com/banner.jpg?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEF8aCXNhLWVhc3QtMSJHMEUCIGnO3nnL5KHjUfrgf%2B2yv1xqsFfyvg2oEmIFQ8SqE7z2AiEA2mYclAyUcbLw0%2BBC4cmfSx9jGGuOYgdF8tISBkXMw3oq7QIIqP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwzMzY5NzU4MTEyNTciDKIUzHTG0XRM8Tu2QirBAmLCkjCjLwUDdBTM3WFgDC4UdTwyD9Pzx40HIVoilug0GJXeBzG9IC77xY3Z%2BKLMLzOdVaDjQWg6BFwWIiJmN3Yy9pxNwXnnjO4liDte%2FOSBKcGlPJhZnGWCezX%2FcaO2yY240f5WZSAWyCxZG6euBeOb1KcibCsLl0%2B5HjouCmZ858FrR4AV12RK%2F%2BV494fhctXiiVgRimzYQjof9qCukSDOKYmqQDOL1V%2BPxLfiYe61EGETZ47zNyHvJXrh16WrGelPS1ifizMlGvuGVllWQyCJpZ%2FKTUe76xlE9JR8HjAtf7L0w63efAd18s9xwpMPaUGNG2qid5cPut1rBnKWjz9Z2ON0um%2BKXrVOlwuM1gWyS3Y3gAgKXMtOOB0XRxVSb%2BctRi8QhbA5m0Nidp9dMZMFEo%2F6ueAPsALmSoIRcSjXYDDuhK%2BQBjqzAvfj8USTv3UQCTuJ%2Bt1VIDHMrwrCpAEcFZSa7fey7M1pCecAmfCiZsGG%2FpVWzieFIlwxWkH8wehENUru4yhr7vZ0kncCnFUNgzOJHH3Y5LOsGRyZoEtTgQUVoJ06uKpd2X1LRlLAdbc4tctWi8FdX0VCxzHvHhi2TVeu3nnNdo0XlV4nOzMK8SK7kHUvObYnmaeD%2BvaH22F6003i9dvUSQwWgmbe1GeDIffO1h5j7VRvpeKTkEhb9%2FjQ5n6luSkeh2ji4MzaHLUOiPRmfZYlaDjJOd%2FUIrGUKfMyrONt%2BuyNIKE7IZotKJ0csXaZGtkpPr61RxUWC2%2BeHc6zoudQCOAeRp1IbGO%2FfPk1snKXZE5ssNewVBl0xqYjiYoh23q9JaJbr6f7IAo8kjRDXd6CKJbSkfc%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220215T152856Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAU45KS2K4SFEBLE6B%2F20220215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=37ec53d60705b4168d75165de90b77f40815a24c1adfc0087070a90b99bfbb9e");
+  background-image: url("https://luxxy-covid-testing-system-pdf-pt-rtec.s3.amazonaws.com/php1/banner.jpg");
   background-size: cover;
   background-position: center;
   height: 400px;
