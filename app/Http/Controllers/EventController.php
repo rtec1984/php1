@@ -53,7 +53,7 @@ class EventController extends Controller
 
             $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
 
-            $requestImage->move(public_path('img/events'), $imageName);
+            $requestImage->move(public_path('img/events'), $imageName, 's3');
 
             $event->image = $imageName;
 
@@ -142,7 +142,7 @@ class EventController extends Controller
 
             $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
 
-            $requestImage->move(public_path('img/events'), $imageName);
+            $requestImage->move(public_path('img/events'), $imageName, 's3');
 
             $data['image'] = $imageName;
 

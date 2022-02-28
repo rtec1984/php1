@@ -71,7 +71,7 @@ body {
 
 /* Search Container */
 #search-container {
-  background-image: url("https://luxxy-covid-testing-system-pdf-pt-rtec.s3.amazonaws.com/php1/banner.jpg");
+  background-image: url("../img/banner.jpg");
   background-size: cover;
   background-position: center;
   height: 400px;
