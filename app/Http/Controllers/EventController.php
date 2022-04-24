@@ -59,8 +59,6 @@ class EventController extends Controller
             $requestImage->move(public_path('img/events'), $imageName, 's3');
 
             $event->image = $imageName;
-
-            Storage::disk('s3')->put($imageName, fopen($requestImage->file('image'), 'r+'), 'public');
         }
 
         $user = auth()->user();
