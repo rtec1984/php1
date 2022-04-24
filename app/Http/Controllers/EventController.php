@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use IlluminateSupportFacadesStorage;
+use Illuminate\Support\Facades\Storage;
 
 use App\Models\Event;
 use App\Models\User;
@@ -46,7 +46,7 @@ class EventController extends Controller
         $event->description = $request->description;
         $event->items = $request->items;
 
-        
+
         // Image Upload
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
 
@@ -56,9 +56,11 @@ class EventController extends Controller
 
             $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
 
-            $requestImage->move(public_path('s3://rtec84/php1/eventos/'), $imageName, 's3');
+            $requestImage->move(public_path('img/events'), $imageName, 's3');
 
             $event->image = $imageName;
+
+            Storage::disk('s3')->put($imageName, fopen($requestImage->file('image'), 'r+'), 'public');
         }
 
         $user = auth()->user();
