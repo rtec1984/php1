@@ -57,6 +57,8 @@ body {
   justify-content: space-between;
   background-color: #FFF;
   padding: 5px 0;
+  position: relative;
+  width: 100%;
 }
 
 #navbar a {
@@ -247,15 +249,34 @@ footer {
   font-weight: bold;
 }
 
-footer p {
-  margin-bottom: 0;
+footer {
+  background-color: #333;
+  position: fixed;
+  width: 100%;
 }
 
 .rtec a {
-  font-size: 12px;
+  font-size: 14px;
   color: #ffffff;
   font-weight: 900;
 }
+
 .rtec a:hover {
-  color: #000000;
+  background-color: #ddd;
+  color: black;
+}
+
+.btn-floating .fab,
+.btn-floating .far,
+.btn-floating .fas {
+    width: 2.3125rem;
+    line-height: 2.3125rem;
+    font-size: xx-large;
+}
+
+.mb-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0px !important;
 }
