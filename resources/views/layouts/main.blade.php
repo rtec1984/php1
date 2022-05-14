@@ -21,8 +21,8 @@
   <link rel="stylesheet" href="/css/styles.css">
   <script src="/js/scripts.js"></script>
   <!-- Icone da aplicação -->
-  <link rel="shortcut icon" href="https://cdn.awsli.com.br/255/255552/favicon/08a8ba02df.jpg" />
-  <link rel="icon" href="https://cdn.awsli.com.br/255/255552/favicon/08a8ba02df.jpg" sizes="192x192">
+  <link rel="shortcut icon" href="https://rtec84.s3.amazonaws.com/wg/WG.png" />
+  <link rel="icon" href="https://rtec84.s3.amazonaws.com/wg/WG.png" sizes="192x192">
 
   <title>@yield('title')</title>
 
@@ -30,21 +30,29 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="collapse navbar-collapse" id="navbar">
-        <a href="/" class="navbar-brand">
-          <img src="https://cdn.awsli.com.br/255/255552/logo/7ac966010f.jpg" alt="RTEC">
-        </a>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="/" class="nav-link">EVENTOS</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a href="/" class="navbar-brand">
+        <img src="https://rtec84.s3.amazonaws.com/wg/war.png" alt="WAR">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado" style="flex-direction: row-reverse!important;">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/regras">REGRAS <span class="sr-only">(página atual)</span></a>
           </li>
           <li class="nav-item">
-            <a href="/events/create" class="nav-link">CRIAR EVENTOS</a>
+            <a href="/ranking" class="nav-link">RANKING</a>
+          </li>
+          <li class="nav-item">
+            <a href="/events/create" class="nav-link">CADASTRAR RESULTADO</a>
           </li>
           @auth
           <li class="nav-item">
-            <a href="/dashboard" class="nav-link">MEUS EVENTOS</a>
+            <a href="/dashboard" class="nav-link">MEUS RESULTADOS</a>
           </li>
           <li class="nav-item">
             <form action="/logout" method="POST">
@@ -61,7 +69,7 @@
             <a href="/login" class="nav-link">ENTRAR</a>
           </li>
           <li class="nav-item">
-            <a href="/register" class="nav-link">CADASTRAR</a>
+            <a href="/register" class="nav-link">REGISTRAR</a>
           </li>
           @endguest
         </ul>
@@ -86,25 +94,29 @@
         <!-- Discord -->
         <a href="https://discord.com/invite/7cNqtMQpnt" target="_blank" class="nav-link"><i class="fab fa-discord"></i>
           DISCORD &copy;
-          2021-<?php echo date('Y'); ?>
+          2021-
+          <?php echo date('Y'); ?>
         </a>
 
         <!-- Instagram -->
         <a href="https://www.instagram.com/war_grow/" target="_blank" class="nav-link"><i class="fab fa-instagram"></i>
           INSTAGRAM &copy;
-          2019-<?php echo date('Y'); ?>
+          2019-
+          <?php echo date('Y'); ?>
         </a>
 
         <!-- Whatsapp -->
         <a href="https://chat.whatsapp.com/CurZlhqH5wJKEvcQs0zWGw" target="_blank" class="nav-link"><i
             class="fab fa-whatsapp"></i> WHATSAPP &copy;
-          2019-<?php echo date('Y'); ?>
+          2019-
+          <?php echo date('Y'); ?>
         </a>
 
         <!-- RTEC -->
         <a href="https://rochatec.lojaintegrada.com.br/" target="_blank" class="nav-link"><i
             class="fa fa-fw fa-laptop"></i> ROCHA TECNOLOGIA &copy;
-          2017-<?php echo date('Y'); ?>
+          2017-
+          <?php echo date('Y'); ?>
         </a>
 
       </section>
@@ -148,6 +160,8 @@
       });
   });
   </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

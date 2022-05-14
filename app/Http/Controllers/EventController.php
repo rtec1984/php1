@@ -19,7 +19,7 @@ class EventController extends Controller
         if ($search) {
 
             $events = Event::where([
-                ['title', 'like', '%' . $search . '%']
+                ['partida', 'like', '%' . $search . '%']
             ])->get();
         } else {
             $events = Event::all();
@@ -38,35 +38,16 @@ class EventController extends Controller
 
         $event = new Event;
 
-        $event->title = $request->title;
+        $event->partida = $request->partida;
         $event->date = $request->date;
-        $event->city = $request->city;
-        $event->contact = $request->contact;
-        $event->private = $request->private;
-        $event->description = $request->description;
-        $event->items = $request->items;
-
-
-        // Image Upload
-        if ($request->hasFile('image') && $request->file('image')->isValid()) {
-
-            $requestImage = $request->image;
-
-            $extension = $requestImage->extension();
-
-            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
-
-            $requestImage->move(public_path('img/events'), $imageName);
-
-            $event->image = $imageName;
-        }
-
+        $event->participantes = $request->participantes;
+        $event->tempo = $request->tempo;
         $user = auth()->user();
         $event->user_id = $user->id;
 
         $event->save();
 
-        return redirect('/')->with('msg', 'Evento criado com sucesso!');
+        return redirect('/')->with('msg', 'Resultado cadastrado com sucesso!');
     }
 
     public function show($id)
@@ -113,7 +94,7 @@ class EventController extends Controller
 
         Event::findOrFail($id)->delete();
 
-        return redirect('/dashboard')->with('msg', 'Evento excluído com sucesso!');
+        return redirect('/dashboard')->with('msg', 'Resultado excluído com sucesso!');
     }
 
     public function edit($id)
@@ -151,7 +132,7 @@ class EventController extends Controller
 
         Event::findOrFail($request->id)->update($data);
 
-        return redirect('/dashboard')->with('msg', 'Evento editado com sucesso!');
+        return redirect('/dashboard')->with('msg', 'Resultado editado com sucesso!');
     }
 
     public function joinEvent($id)
@@ -163,18 +144,6 @@ class EventController extends Controller
 
         $event = Event::findOrFail($id);
 
-        return redirect('/dashboard')->with('msg', 'Sua presença está confirmada no evento ' . $event->title);
-    }
-
-    public function leaveEvent($id)
-    {
-
-        $user = auth()->user();
-
-        $user->eventsAsParticipant()->detach($id);
-
-        $event = Event::findOrFail($id);
-
-        return redirect('/dashboard')->with('msg', 'Você saiu com sucesso do evento: ' . $event->title);
+        return redirect('/dashboard')->with('msg', 'Sua presença está confirmada no resultado da ' . $event->partida);
     }
 }

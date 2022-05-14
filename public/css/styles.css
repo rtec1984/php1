@@ -1,6 +1,8 @@
 /* General */
 * {
   font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: bold;
 }
 
 body {
@@ -50,7 +52,7 @@ body {
 
 /* navbar */
 #navbar img {
-  width: 25%;
+  width: 100%;
 }
 
 #navbar {
@@ -71,26 +73,25 @@ body {
   color: #757575;
 }
 
-/* Search Container */
-#search-container {
-  background-image: url("https://rtec84.s3.amazonaws.com/php1/banner.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  padding: 50px;
-  text-align: center;
+.navbar-nav .nav-link {
+  padding-right: 0;
+  padding-left: 0.5rem;
 }
 
-#search-container h1 {
-  color: #ffffff;
-  margin-bottom: 30px;
-  font-weight: 900;
-  font-size: 24px;
+/* Search Container */
+#search-container {
+  background-image: url("https://rtec84.s3.amazonaws.com/wg/war-grow.png");
+  background-position: center;
+  height: 620px;
+  padding: 10px;
+  text-align: center;
+  display: none;
 }
 
 #search-container form {
-  width: 50%;
+  width: 20%;
   margin: 0 auto;
+  display: none;
 }
 
 /* Events list */
@@ -113,20 +114,33 @@ body {
 
 #cards-container {
   display: flex;
+  justify-content: space-evenly;
 }
 
 #events-container .card {
-  flex: 1 1 24%;
-  max-width: 25%;
-  border-radius: 10px;
-  padding: 0;
   margin: .5%;
+  position: relative;
+  display: flex;
+  min-width: auto;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
 }
 
 #events-container img {
   max-height: 150px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
 }
 
 .card .card-date {

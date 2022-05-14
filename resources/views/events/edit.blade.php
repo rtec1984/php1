@@ -1,68 +1,73 @@
 @extends('layouts.main')
 
-@section('title', 'Editando: ' . $event->title)
+@section('title', 'Editando: ' . $event->partida . ' - ' . date('d/m/Y', strtotime($event->date)))
 
 @section('content')
 
-<div id="event-create-container" class="col-md-6 offset-md-3">
-  <h1>Editando: {{ $event->title }}</h1>
+<div id="event-create-container" class="col-md-2 offset-md-3">
   <form action="/events/update/{{ $event->id }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
     <div class="form-group">
-      <label for="image">Imagem do Evento:</label>
-      <input type="file" id="image" name="image" class="from-control-file">
-      <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}" class="img-preview">
-    </div>
-    <div class="form-group">
-      <label for="title">Evento:</label>
-      <input type="text" class="form-control" id="title" name="title" placeholder="Nome do evento" value="{{ $event->title }}">
-    </div>
-    <div class="form-group">
-      <label for="date">Data do evento:</label>
-      <input type="date" class="form-control" id="date" name="date" value="{{ $event->date->format('Y-m-d') }}">
-    </div>
-    <div class="form-group">
-      <label for="title">Cidade:</label>
-      <input type="text" class="form-control" id="city" name="city" placeholder="Local do evento" value="{{ $event->city }}">
-    </div>
-    <div class="form-group">
-      <label for="title">Contato:</label>
-      <input type="text" class="form-control" id="contact" name="contact" placeholder="telefone" value="{{ $event->contact }}">
-    </div>
-    <div class="form-group">
-      <label for="title">O evento é privado?</label>
-      <select name="private" id="private" class="form-control">
-        <option value="0">Não</option>
-        <option value="1" {{ $event->private == 1 ? "selected='selected'" : "" }}>Sim</option>
+      <label for="partida">Número da partida:</label>
+      <select class="form-select" aria-label="partida" id="partida" name="partida">
+        <option value="Partida 01">Partida 01</option>
+        <option value="Partida 02">Partida 02</option>
+        <option value="Partida 03">Partida 03</option>
+        <option value="Partida 04">Partida 04</option>
+        <option value="Partida 05">Partida 05</option>
+        <option value="Partida 06">Partida 06</option>
+        <option value="Partida 07">Partida 07</option>
+        <option value="Partida 08">Partida 08</option>
+        <option value="Partida 09">Partida 09</option>
+        <option value="Partida 10">Partida 10</option>
+        <option value="Partida 11">Partida 11</option>
+        <option value="Partida 12">Partida 12</option>
+        <option value="Partida 13">Partida 13</option>
+        <option value="Partida 14">Partida 14</option>
+        <option value="Partida 15">Partida 15</option>
+        <option value="Partida 16">Partida 16</option>
+        <option value="Partida 17">Partida 17</option>
+        <option value="Partida 18">Partida 18</option>
+        <option value="Partida 19">Partida 19</option>
+        <option value="Partida 20">Partida 20</option>
+        <option value="Partida 21">Partida 21</option>
+        <option value="Partida 22">Partida 22</option>
+        <option value="Partida 23">Partida 23</option>
+        <option value="Partida 24">Partida 24</option>
+        <option value="Partida 25">Partida 25</option>
+        <option value="Partida 26">Partida 26</option>
+        <option value="Partida 27">Partida 27</option>
+        <option value="Partida 28">Partida 28</option>
+        <option value="Partida 29">Partida 29</option>
+        <option value="Partida 30">Partida 30</option>
       </select>
     </div>
+    <br>
     <div class="form-group">
-      <label for="title">Descrição:</label>
-      <textarea name="description" id="description" class="form-control" placeholder="O que vai acontecer no evento?">{{ $event->description }}</textarea>
+      <label for="date">Data da partida:</label>
+      <input type="date" class="form-control" id="date" name="date">
     </div>
+    <br>
     <div class="form-group">
-      <label for="title">Adicione itens de infraestrutura:</label>
-      <div class="form-group">	
-        <input type="checkbox" name="items[]" value="Mesas"> Mesas
-      </div>
-      <div class="form-group">	
-        <input type="checkbox" name="items[]" value="Cadeiras"> Cadeiras
-      </div>
-      <div class="form-group">	
-        <input type="checkbox" name="items[]" value="Palco"> Palco
-      </div>
-      <div class="form-group">	
-        <input type="checkbox" name="items[]" value="Open Bar"> Open Bar
-      </div>
-      <div class="form-group">	
-        <input type="checkbox" name="items[]" value="Open Food"> Open food
-      </div>
-      <div class="form-group">	
-        <input type="checkbox" name="items[]" value="Brindes"> Brindes
-      </div>
+      <label for="participantes">Número de participantes:</label>
+      <select class="form-select" aria-label="participantes" id="participantes" name="participantes">
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
     </div>
-    <input type="submit" class="btn btn-primary" value="Editar Evento">
+    <br>
+    <div class="form-group">
+      <label for="tempo">Duração da partida:</label>
+      <select class="form-select" aria-label="duração" id="tempo" name="tempo">
+        <option value="60 minutos">60 minutos</option>
+        <option value="90 minutos">90 minutos</option>
+      </select>
+    </div>
+    <br>
+    <input type="submit" class="btn btn-primary" value="Editar resultado">
   </form>
 </div>
 
