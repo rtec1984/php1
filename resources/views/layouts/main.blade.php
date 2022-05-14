@@ -40,7 +40,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="conteudoNavbarSuportado" style="flex-direction: row-reverse!important;">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="/regras">REGRAS <span class="sr-only">(página atual)</span></a>
           </li>

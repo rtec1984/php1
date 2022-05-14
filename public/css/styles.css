@@ -294,3 +294,7 @@ footer {
     justify-content: space-evenly;
     margin: 0px !important;
 }
+
+.regras {
+  padding: 2rem;
+}
