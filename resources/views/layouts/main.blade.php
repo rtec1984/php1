@@ -42,34 +42,35 @@
       <div class="collapse navbar-collapse" id="conteudoNavbarSuportado" style="flex-direction: row-reverse!important;">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="/regras">REGRAS <span class="sr-only">(página atual)</span></a>
+            <a class="nav-link" href="/regras"><i class="fas fa-exclamation-circle"></i> REGRAS <span class="sr-only">(página atual)</span></a>
           </li>
           <li class="nav-item">
-            <a href="/ranking" class="nav-link">RANKING</a>
+            <a href="/ranking" class="nav-link"><i class="fas fa-trophy"></i> RANKING</a>
           </li>
           <li class="nav-item">
-            <a href="/events/create" class="nav-link">CADASTRAR RESULTADO</a>
+            <a href="/events/create" class="nav-link"><i
+              class="fas fa-dice"></i> CADASTRAR RESULTADO</a>
           </li>
           @auth
           <li class="nav-item">
-            <a href="/dashboard" class="nav-link">MEUS RESULTADOS</a>
+            <a href="/dashboard" class="nav-link"><i class="fas fa-chart-line"></i> MEUS RESULTADOS</a>
           </li>
           <li class="nav-item">
             <form action="/logout" method="POST">
               @csrf
               <a href="/logout" class="nav-link" onclick="event.preventDefault();
                     this.closest('form').submit();">
-                SAIR
+                <i class="fas fa-sign-out-alt"></i> SAIR
               </a>
             </form>
           </li>
           @endauth
           @guest
           <li class="nav-item">
-            <a href="/login" class="nav-link">ENTRAR</a>
+            <a href="/login" class="nav-link"><i class="fas fa-sign-in-alt"></i> ENTRAR</a>
           </li>
           <li class="nav-item">
-            <a href="/register" class="nav-link">REGISTRAR</a>
+            <a href="/register" class="nav-link"><i class="fas fa-user-plus"></i> REGISTRAR</a>
           </li>
           @endguest
         </ul>
