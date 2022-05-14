@@ -4,13 +4,9 @@
 
 @section('content')
 
-<img src="https://rtec84.s3.amazonaws.com/wg/war-grow.png" class="img-fluid" alt="Imagem responsiva">
+<img src="https://rtec84.s3.amazonaws.com/wg/war-grow.png" class="img-fluid" alt="Imagem responsiva" style="padding: 0.5rem;">
 <div id="events-container" class="col-md-12">
-    @if($search)
-    <h2>Buscando por: {{ $search }}</h2>
-    @else
     <h2>Últimos resultados...</h2>
-    @endif
     <div id="cards-container" class="row">
         @foreach($events as $event)
         <div class="card col-md-2">
@@ -22,9 +18,7 @@
             </div>
         </div>
         @endforeach
-        @if(count($events) == 0 && $search)
-            <p>Não foi possível encontrar nenhum resultado com {{ $search }}! <a href="/">Ver todos</a></p>
-        @elseif(count($events) == 0)
+        @if(count($events) == 0)
             <p>Não há resultados disponíveis</p>
         @endif
     </div>

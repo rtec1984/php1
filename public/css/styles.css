@@ -51,31 +51,17 @@ body {
 }
 
 /* navbar */
-#navbar img {
-  width: 100%;
-}
-
-#navbar {
-  justify-content: space-between;
-  background-color: #FFF;
-  padding: 5px 0;
+.navbar {
   position: relative;
-  width: 100%;
-}
-
-#navbar a {
-  font-size: 14px;
-  color: #000000;
-  font-weight: 900;
-}
-
-#navbar a:hover {
-  color: #757575;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
 }
 
 .navbar-nav .nav-link {
-  padding-right: 0;
-  padding-left: 0.5rem;
+  padding: 0.5rem;
 }
 
 /* Search Container */
@@ -96,7 +82,8 @@ body {
 
 /* Events list */
 #events-container {
-  padding: 50px;
+  padding-top: 1rem;
+  padding-bottom: 3.5rem;
 }
 
 #events-container h2 {
@@ -276,8 +263,8 @@ footer {
 }
 
 .rtec a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: transparent;
+  color: #777;
 }
 
 .btn-floating .fab,
@@ -292,7 +279,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 0px !important;
+    margin: -0.5rem !important;
+    padding-bottom: 0.5rem;
 }
 
 .regras {
