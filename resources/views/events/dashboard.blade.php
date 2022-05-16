@@ -30,15 +30,13 @@
                 <td>{{ date('d/m/Y', strtotime($event->date)) }}</td>
                 <td>{{ $event->vitoria }}</td>
                 <td>{{ $event->vencedor }}</td>
-                <td><a href="/events/{{ $event->id }}" class="btn btn-info btn-sm"><ion-icon name="eye-outline"></ion-icon> Ver</a> <a href="/events/edit/{{ $event->id }}" class="btn btn-warning btn-sm edit-btn">
-                        <ion-icon name="create-outline"></ion-icon> Editar
-                    </a>
+                <td><a href="/events/{{ $event->id }}" class="btn btn-info btn-sm"><ion-icon name="eye-outline"></ion-icon></a> <a href="/events/edit/{{ $event->id }}" class="btn btn-warning btn-sm edit-btn">
+                        <ion-icon name="create-outline"></ion-icon></a>
                     <form action="/events/{{ $event->id }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm delete-btn">
-                            <ion-icon name="trash-outline"></ion-icon> Deletar
-                        </button>
+                            <ion-icon name="trash-outline"></ion-icon></button>
                     </form>
                 </td>
             </tr>
@@ -75,13 +73,12 @@
                 <td>{{ date('d/m/Y', strtotime($event->date)) }}</td>
                 <td>{{ $event->vitoria }}</td>
                 <td>{{ $event->vencedor }}</td>
-                <td><a href="/events/{{ $event->id }}" class="btn btn-info btn-sm"><ion-icon name="eye-outline"></ion-icon> Ver</a>
+                <td><a href="/events/{{ $event->id }}" class="btn btn-info btn-sm"><ion-icon name="eye-outline"></ion-icon></a>
                     <form action="/events/leave/{{ $event->id }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-dark btn-sm delete-btn">
-                            <ion-icon name="log-out-outline"></ion-icon> Sair
-                        </button>
+                            <ion-icon name="log-out-outline"></ion-icon></button>
                     </form>
                 </td>
             </tr>

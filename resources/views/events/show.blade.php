@@ -5,7 +5,7 @@
 @section('content')
 
 <div id="cards-container" class="row">
-  <div class="card col-md-2">
+  <div class="card col-md-3">
     <div class="card-body">
       <p class="card-date">
         <ion-icon name="dice"></ion-icon> {{ $event->partida }} <ion-icon name="calendar"></ion-icon> {{ date('d/m/Y',

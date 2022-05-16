@@ -5,11 +5,7 @@
   font-weight: bold;
 }
 
-body {
-  min-height: 100vh;
-  padding-bottom: 100px;
-  position: relative;
-}
+
 
 .row {
   margin: 0;
@@ -284,7 +280,7 @@ footer {
 }
 
 .regras {
-  padding: 2rem;
+  padding-bottom: 7rem;
 }
 
 .row {
