@@ -77,8 +77,8 @@
       </div>
     </nav>
   </header>
-  <main>
-    <div class="container-fluid">
+  <main style="margin-bottom: 7rem;">
+    <div class="container-fluid" style="padding-bottom: 2rem;">
       <div class="row">
         @if(session('msg'))
         <p class="msg">{{ session('msg') }}</p>
