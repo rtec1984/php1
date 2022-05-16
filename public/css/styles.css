@@ -286,3 +286,8 @@ footer {
 .regras {
   padding: 2rem;
 }
+
+.row {
+  margin: 0;
+  padding-top: 2rem;
+}

@@ -18,12 +18,11 @@ class CreateEventsTable extends Migration
             $table->timestamps();
             $table->string("partida");
             $table->dateTime('date');
-            $table->string("participantes");
-            $table->string("tempo");
+            $table->boolean("vitoria");
+            $table->string('vencedor');
             $table->foreignId('user_id')->constrained();
         });
     }
-
     /**
      * Reverse the migrations.
      *

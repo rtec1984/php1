@@ -7,25 +7,14 @@ use Illuminate\Support\Facades\Storage;
 
 use App\Models\Event;
 use App\Models\User;
-
 class EventController extends Controller
 {
 
     public function index()
     {
+        $events = Event::all();
 
-        $search = request('search');
-
-        if ($search) {
-
-            $events = Event::where([
-                ['partida', 'like', '%' . $search . '%']
-            ])->get();
-        } else {
-            $events = Event::all();
-        }
-
-        return view('welcome', ['events' => $events, 'search' => $search]);
+        return view('welcome', ['events' => $events]);
     }
 
     public function create()
@@ -40,11 +29,10 @@ class EventController extends Controller
 
         $event->partida = $request->partida;
         $event->date = $request->date;
-        $event->participantes = $request->participantes;
-        $event->tempo = $request->tempo;
+        $event->vitoria = $request->vitoria;
         $user = auth()->user();
         $event->user_id = $user->id;
-
+        $event->vencedor = $user->name;
         $event->save();
 
         return redirect('/')->with('msg', 'Resultado cadastrado com sucesso!');
@@ -73,6 +61,7 @@ class EventController extends Controller
 
         return view('events.show', ['event' => $event, 'eventOwner' => $eventOwner, 'hasUserJoined' => $hasUserJoined]);
     }
+
 
     public function dashboard()
     {
@@ -116,20 +105,6 @@ class EventController extends Controller
 
         $data = $request->all();
 
-        // Image Upload
-        if ($request->hasFile('image') && $request->file('image')->isValid()) {
-
-            $requestImage = $request->image;
-
-            $extension = $requestImage->extension();
-
-            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
-
-            $requestImage->move(public_path('img/events'), $imageName, 's3');
-
-            $data['image'] = $imageName;
-        }
-
         Event::findOrFail($request->id)->update($data);
 
         return redirect('/dashboard')->with('msg', 'Resultado editado com sucesso!');
@@ -144,6 +119,18 @@ class EventController extends Controller
 
         $event = Event::findOrFail($id);
 
-        return redirect('/dashboard')->with('msg', 'Sua presença está confirmada no resultado da ' . $event->partida);
+        return redirect('/dashboard')->with('msg', 'Sua participação está confirmada no resultado da ' . $event->partida . ' - ' . date('d/m/Y', strtotime($event->date)));
+    }
+
+    public function leaveEvent($id)
+    {
+
+        $user = auth()->user();
+
+        $user->eventsAsParticipant()->detach($id);
+
+        $event = Event::findOrFail($id);
+
+        return redirect('/dashboard')->with('msg', 'Você saiu com sucesso do resultado da ' . $event->partida . ' - ' . date('d/m/Y', strtotime($event->date)));
     }
 }

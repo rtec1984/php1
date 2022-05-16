@@ -10,36 +10,36 @@
     <div class="form-group">
       <label for="partida">Número da partida:</label> 
       <select class="form-select" aria-label="partida" id="partida" name="partida" required>
-        <option value="Partida 01">Partida 01</option>
-        <option value="Partida 02">Partida 02</option>
-        <option value="Partida 03">Partida 03</option>
-        <option value="Partida 04">Partida 04</option>
-        <option value="Partida 05">Partida 05</option>
-        <option value="Partida 06">Partida 06</option>
-        <option value="Partida 07">Partida 07</option>
-        <option value="Partida 08">Partida 08</option>
-        <option value="Partida 09">Partida 09</option>
-        <option value="Partida 10">Partida 10</option>
-        <option value="Partida 11">Partida 11</option>
-        <option value="Partida 12">Partida 12</option>
-        <option value="Partida 13">Partida 13</option>
-        <option value="Partida 14">Partida 14</option>
-        <option value="Partida 15">Partida 15</option>
-        <option value="Partida 16">Partida 16</option>
-        <option value="Partida 17">Partida 17</option>
-        <option value="Partida 18">Partida 18</option>
-        <option value="Partida 19">Partida 19</option>
-        <option value="Partida 20">Partida 20</option>
-        <option value="Partida 21">Partida 21</option>
-        <option value="Partida 22">Partida 22</option>
-        <option value="Partida 23">Partida 23</option>
-        <option value="Partida 24">Partida 24</option>
-        <option value="Partida 25">Partida 25</option>
-        <option value="Partida 26">Partida 26</option>
-        <option value="Partida 27">Partida 27</option>
-        <option value="Partida 28">Partida 28</option>
-        <option value="Partida 29">Partida 29</option>
-        <option value="Partida 30">Partida 30</option>
+        <option value="PARTIDA 01">PARTIDA 01</option>
+        <option value="PARTIDA 02">PARTIDA 02</option>
+        <option value="PARTIDA 03">PARTIDA 03</option>
+        <option value="PARTIDA 04">PARTIDA 04</option>
+        <option value="PARTIDA 05">PARTIDA 05</option>
+        <option value="PARTIDA 06">PARTIDA 06</option>
+        <option value="PARTIDA 07">PARTIDA 07</option>
+        <option value="PARTIDA 08">PARTIDA 08</option>
+        <option value="PARTIDA 09">PARTIDA 09</option>
+        <option value="PARTIDA 10">PARTIDA 10</option>
+        <option value="PARTIDA 11">PARTIDA 11</option>
+        <option value="PARTIDA 12">PARTIDA 12</option>
+        <option value="PARTIDA 13">PARTIDA 13</option>
+        <option value="PARTIDA 14">PARTIDA 14</option>
+        <option value="PARTIDA 15">PARTIDA 15</option>
+        <option value="PARTIDA 16">PARTIDA 16</option>
+        <option value="PARTIDA 17">PARTIDA 17</option>
+        <option value="PARTIDA 18">PARTIDA 18</option>
+        <option value="PARTIDA 19">PARTIDA 19</option>
+        <option value="PARTIDA 20">PARTIDA 20</option>
+        <option value="PARTIDA 21">PARTIDA 21</option>
+        <option value="PARTIDA 22">PARTIDA 22</option>
+        <option value="PARTIDA 23">PARTIDA 23</option>
+        <option value="PARTIDA 24">PARTIDA 24</option>
+        <option value="PARTIDA 25">PARTIDA 25</option>
+        <option value="PARTIDA 26">PARTIDA 26</option>
+        <option value="PARTIDA 27">PARTIDA 27</option>
+        <option value="PARTIDA 28">PARTIDA 28</option>
+        <option value="PARTIDA 29">PARTIDA 29</option>
+        <option value="PARTIDA 30">PARTIDA 30</option>
       </select>
     </div>
     <br>
@@ -49,20 +49,10 @@
     </div>
     <br>
     <div class="form-group">
-      <label for="participantes">Número de participantes:</label>
-      <select class="form-select" aria-label="participantes" id="participantes" name="participantes" required>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-      </select>
-    </div>
-    <br>
-    <div class="form-group">
-      <label for="tempo">Duração da partida:</label>
-      <select class="form-select" aria-label="duração" id="tempo" name="tempo" required>
-        <option value="60 minutos">60 minutos</option>
-        <option value="90 minutos">90 minutos</option>
+      <label for="vitoria">A vitória foi no:</label>
+      <select class="form-select" aria-label="vitoria" id="vitoria" name="vitoria" required>
+        <option value="TEMPO">TEMPO</option>
+        <option value="OBJETIVO">OBJETIVO</option>
       </select>
     </div>
     <br>
