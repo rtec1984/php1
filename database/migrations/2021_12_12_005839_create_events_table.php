@@ -18,9 +18,11 @@ class CreateEventsTable extends Migration
             $table->timestamps();
             $table->string("partida");
             $table->dateTime('date');
-            $table->boolean("vitoria");
+            $table->string("vitoria");
             $table->string('vencedor');
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id')->constrained()
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
         });
     }
     /**
