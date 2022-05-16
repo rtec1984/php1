@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="container">
-
+<h1>Ranking</h1>
     <div class="row">
         <div class="col-auto">
             <br>
@@ -13,12 +13,12 @@
 
                 <thead>
                     <tr>
-                        <th scope="col">POSIÇÃO</th>
+                        <th scope="col">#</th>
                         <th scope="col">NOME</th>
-                        <th scope="col">PONTUAÇÃO</th>
-                        <th scope="col">JOGOS</th>
-                        <th scope="col">VITÓRIAS</th>
-                        <th scope="col">APROVEITAMENTO</th>
+                        <th scope="col">P</th>
+                        <th scope="col">J</th>
+                        <th scope="col">V</th>
+                        <th scope="col">%</th>
                     </tr>
                 </thead>
 
@@ -36,6 +36,8 @@
             </table>
         </div>
     </div>
+    <p># Posição, P Pontuação, J Jogos, V Vitórias, % Aproveitamento.</p>
+
 </div>
 
 @endsection
