@@ -27,6 +27,10 @@ Route::get('/regras', function () {
     return view('regras');
 });
 
+Route::get('/mailgum', function () {
+    return view('mailgum');
+});
+
 Route::get('/ranking', function () {
     return view('ranking');
 });
