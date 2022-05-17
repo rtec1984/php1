@@ -4,12 +4,13 @@
 
 @section('content')
 
-<div id="event-create-container" class="col-md-2 offset-md-3">
+<div id="event-create-container" class="col-auto offset-md-1">
   <form action="/events/update/{{ $event->id }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
     <div class="form-group">
-      <label for="partida">Número da partida:</label>
+      <p class="card-date"><ion-icon name="dice"></ion-icon> {{ $event->partida }}</p>
+      <label for="partida">NÚMERO DA PARTIDA:</label>
       <select class="form-select" aria-label="partida" id="partida" name="partida">
         <option value="PARTIDA 01">PARTIDA 01</option>
         <option value="PARTIDA 02">PARTIDA 02</option>
@@ -45,12 +46,14 @@
     </div>
     <br>
     <div class="form-group">
-      <label for="date">Data da partida:</label>
+      <p class="card-date"><ion-icon name="calendar"></ion-icon> {{ date('d/m/Y', strtotime($event->date)) }}</p>
+      <label for="date">DATA DA PARTIDA:</label>
       <input type="date" class="form-control" id="date" name="date">
     </div>
     <br>
     <div class="form-group">
-      <label for="vitoria">A vitória foi no:</label>
+      <p class="card-date"><ion-icon name="trophy"></ion-icon> {{ ($event->vitoria) }}</p>
+      <label for="vitoria">VITÓRIA NO:</label>
       <select class="form-select" aria-label="vitoria" id="vitoria" name="vitoria" required>
         <option value="TEMPO">TEMPO</option>
         <option value="OBJETIVO">OBJETIVO</option>

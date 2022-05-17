@@ -8,7 +8,7 @@
     <h1>Ranking:</h1>
 
     <div class="row">
-        <div class="col-auto">
+        <div class="col-md-6 offset-md-1">
             <br>
             <table class="table table-bordered table-striped table-hover table-light table-responsive" id="ranking">
 
@@ -36,9 +36,9 @@
                     <tr>
                         <th scope="row">2</th>
                         <td>Segundo lugar</td>
-                        <td>50</td>
-                        <td>10</td>
-                        <td>5</td>
+                        <td>5000</td>
+                        <td>1000</td>
+                        <td>5000</td>
                         <td>50%</td>
                     </tr>
                     <tr>
