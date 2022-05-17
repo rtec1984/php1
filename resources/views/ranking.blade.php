@@ -36,9 +36,9 @@
                     <tr>
                         <th scope="row">2</th>
                         <td>Segundo lugar</td>
-                        <td>5000</td>
-                        <td>1000</td>
-                        <td>5000</td>
+                        <td>50</td>
+                        <td>10</td>
+                        <td>5</td>
                         <td>50%</td>
                     </tr>
                     <tr>
