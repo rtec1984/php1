@@ -27,8 +27,16 @@ Route::get('/regras', function () {
     return view('regras');
 });
 
-Route::get('/mailgum', function () {
-    return view('mailgum');
+Route::get('send-mail', function () {
+   
+    $details = [
+        'title' => 'Mail from ItSolutionStuff.com',
+        'body' => 'This is for testing email using smtp'
+    ];
+   
+    \Mail::to('rochab@gmail.com')->send(new \App\Mail\MyTestMail($details));
+   
+    dd("Email is Sent.");
 });
 
 Route::get('/ranking', function () {
