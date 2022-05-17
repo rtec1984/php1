@@ -107,14 +107,4 @@ return [
         ],
     ],
 
-'driver' => 'mailgun',
-'host' => 'smtp.mailgun.org',
-'port' =>  587,
-'from' => ['address' => "rochatec84@gmail.com", 'name' => "${APP_NAME}"],
-'encryption' => 'tls',
-'username' => null,
-'password' => null,
-'sendmail' => '/usr/sbin/sendmail -bs',
-'pretend' => false,
-
 ];
