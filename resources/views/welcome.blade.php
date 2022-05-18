@@ -4,7 +4,7 @@
 
 @section('content')
 
-<img src="https://rtec84.s3.amazonaws.com/wg/war-grow.png" class="img-fluid" alt="Imagem responsiva" style="padding: 0.5rem;">
+<img src="https://rtec84.s3.amazonaws.com/wg/war-grow.png" class="img-fluid" alt="Imagem responsiva" style="padding: 0.5rem; max-width: 1276px;">
 <div id="events-container" class="col-auto">
     <h2>Últimos resultados...</h2>
     <div id="cards-container" class="row">
