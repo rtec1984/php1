@@ -26,7 +26,6 @@ class EventController extends Controller
     {
 
         $event = new Event;
-
         $event->partida = $request->partida;
         $event->date = $request->date;
         $event->vitoria = $request->vitoria;
@@ -42,7 +41,6 @@ class EventController extends Controller
     {
 
         $event = Event::findOrFail($id);
-
         $user = auth()->user();
         $hasUserJoined = false;
 
@@ -67,9 +65,7 @@ class EventController extends Controller
     {
 
         $user = auth()->user();
-
         $events = $user->events;
-
         $eventsAsParticipant = $user->eventsAsParticipant;
 
         return view(
@@ -90,7 +86,6 @@ class EventController extends Controller
     {
 
         $user = auth()->user();
-
         $event = Event::findOrFail($id);
 
         if ($user->id != $event->user_id) {
@@ -114,9 +109,7 @@ class EventController extends Controller
     {
 
         $user = auth()->user();
-
         $user->eventsAsParticipant()->attach($id);
-
         $event = Event::findOrFail($id);
 
         return redirect('/dashboard')->with('msg', 'Sua participação está confirmada no resultado da ' . $event->partida . ' - ' . date('d/m/Y', strtotime($event->date)));
@@ -126,9 +119,7 @@ class EventController extends Controller
     {
 
         $user = auth()->user();
-
         $user->eventsAsParticipant()->detach($id);
-
         $event = Event::findOrFail($id);
 
         return redirect('/dashboard')->with('msg', 'Você saiu com sucesso do resultado da ' . $event->partida . ' - ' . date('d/m/Y', strtotime($event->date)));
