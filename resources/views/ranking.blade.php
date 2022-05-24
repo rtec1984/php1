@@ -26,28 +26,12 @@
                 <tbody>
 
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row">{{ $loop->index + 1 }}</th>
                         <td>Primeiro lugar</td>
                         <td>100</td>
                         <td>10</td>
                         <td>10</td>
                         <td>100%</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Segundo lugar</td>
-                        <td>50</td>
-                        <td>10</td>
-                        <td>5</td>
-                        <td>50%</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Terceiro lugar</td>
-                        <td>0</td>
-                        <td>10</td>
-                        <td>0</td>
-                        <td>0%</td>
                     </tr>
                 </tbody>
             </table>

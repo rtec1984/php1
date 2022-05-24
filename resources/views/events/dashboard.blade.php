@@ -29,7 +29,7 @@
                 <td>{{ $event->partida }}</td>
                 <td>{{ date('d/m/Y', strtotime($event->date)) }}</td>
                 <td>{{ $event->vitoria }}</td>
-                <td>{{ $event->vencedor }}</td>
+                <td>{{ $event->user_name }}</td>
                 <td><a href="/events/{{ $event->id }}" class="btn btn-info btn-sm"><ion-icon name="eye-outline"></ion-icon></a> <a href="/events/edit/{{ $event->id }}" class="btn btn-warning btn-sm edit-btn">
                         <ion-icon name="create-outline"></ion-icon></a>
                     <form action="/events/{{ $event->id }}" method="POST">
@@ -72,7 +72,7 @@
                 <td>{{ $event->partida }}</td>
                 <td>{{ date('d/m/Y', strtotime($event->date)) }}</td>
                 <td>{{ $event->vitoria }}</td>
-                <td>{{ $event->vencedor }}</td>
+                <td>{{ $event->user_name }}</td>
                 <td><a href="/events/{{ $event->id }}" class="btn btn-info btn-sm"><ion-icon name="eye-outline"></ion-icon></a>
                     <form action="/events/leave/{{ $event->id }}" method="POST">
                         @csrf

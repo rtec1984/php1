@@ -55,8 +55,8 @@
       <p class="card-date"><ion-icon name="trophy"></ion-icon> {{ ($event->vitoria) }}</p>
       <label for="vitoria">VITÓRIA NO:</label>
       <select class="form-select" aria-label="vitoria" id="vitoria" name="vitoria" required>
-        <option value="TEMPO">TEMPO</option>
-        <option value="OBJETIVO">OBJETIVO</option>
+        <option value="5">TEMPO</option>
+        <option value="10">OBJETIVO</option>
       </select>
     </div>
     <br>

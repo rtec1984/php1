@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Storage;
 
 use App\Models\Event;
 use App\Models\User;
+use PhpParser\Node\Stmt\Else_;
+use PhpParser\Node\Stmt\If_;
+
 class EventController extends Controller
 {
 
@@ -31,7 +34,7 @@ class EventController extends Controller
         $event->vitoria = $request->vitoria;
         $user = auth()->user();
         $event->user_id = $user->id;
-        $event->vencedor = $user->name;
+        $event->user_name = $user->name;
         $event->save();
 
         return redirect('/')->with('msg', 'Resultado cadastrado com sucesso!');

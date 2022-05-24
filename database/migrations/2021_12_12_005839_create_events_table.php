@@ -18,8 +18,12 @@ class CreateEventsTable extends Migration
             $table->timestamps();
             $table->string("partida");
             $table->dateTime('date');
-            $table->string("vitoria");
-            $table->string('vencedor');
+            $table->integer("vitoria");
+            $table->string('user_name')
+            ->references('users')
+            ->on('name')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->foreignId('user_id')->constrained()
             ->onUpdate('cascade')
             ->onDelete('cascade');
