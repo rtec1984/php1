@@ -29,12 +29,10 @@ class EventController extends Controller
     {
 
         $event = new Event;
-        $event->partida = $request->partida;
         $event->date = $request->date;
         $event->vitoria = $request->vitoria;
         $user = auth()->user();
         $event->user_id = $user->id;
-        $event->user_name = $user->name;
         $event->save();
 
         return redirect('/')->with('msg', 'Resultado cadastrado com sucesso!');

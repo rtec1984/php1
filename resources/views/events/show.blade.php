@@ -13,7 +13,7 @@
       </p>
       <p class="card-date">
         <ion-icon name="trophy"></ion-icon> {{ ($event->vitoria) }} <ion-icon name="star-outline"></ion-icon> {{
-        $event->user_name }}
+        $event->user_id }}
       </p>
       <p class="card-date">
         <ion-icon name="people"></ion-icon> {{ count($event->users) }} PARTICIPANTES
