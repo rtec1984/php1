@@ -3,12 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-
 use App\Models\Event;
 use App\Models\User;
-use PhpParser\Node\Stmt\Else_;
-use PhpParser\Node\Stmt\If_;
 
 class EventController extends Controller
 {

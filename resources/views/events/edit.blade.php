@@ -25,6 +25,16 @@
     <br>
     <input type="submit" class="btn btn-primary" value="Editar resultado">
   </form>
+
+@foreach($event->users as $name)
+<p class="card-date"><ion-icon name="person"></ion-icon> {{ $name->name }}</p>
+@endforeach
+@foreach($event->users as $email)
+<p class="card-date"><ion-icon name="person"></ion-icon> {{ $email->email }}</p>
+@endforeach
+
 </div>
+
+
 
 @endsection
